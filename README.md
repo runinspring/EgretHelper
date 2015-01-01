@@ -1,4 +1,5 @@
-﻿制作egret相关内容的小工具.基于adobe AIR。请先下载运行环境。
+﻿制作egret相关内容的小工具.基于adobe AIR。
+请先下载运行环境:http://get.adobe.com/cn/air
 ------
 ### base64 图片
 ```
@@ -20,7 +21,7 @@ egret启动的时候可以先显示一个logo，是base64的字符串
 对于egret来说，把bin-debug/lib/egret_file_list.js 拷贝到libs文件夹里，
 然后拖拽到js Merge里就行了。
 ```
-    2015年1月1日 1.1.4 增加egret默认的egret_file_list.js文件列表直接读取功能，不需要修改
+    2015年1月1日 1.1.4 增加egret默认的egret_file_list.js文件列表直接读取功能
     2014年12月26日 1.1.3 增加多个js文件合并成一个js文件的功能
     2014年10月06日 1.1.2 去掉二维码默认的http开头
     2014年9月11日 1.1.1 修改错误拼写的说明文字
