@@ -1,5 +1,7 @@
-﻿制作egret相关内容的小工具.基于adobe AIR。
+﻿### 制作egret相关内容的小工具.基于adobe AIR。
+```
 请先下载运行环境:http://get.adobe.com/cn/air
+```
 ------
 ### base64 图片
 ```
@@ -11,16 +13,18 @@ egret启动的时候可以先显示一个logo，是base64的字符串
 输入链接地址，点击保存按钮，会在桌面上生成 QRCode.png
 支持把自定义的图片拖拽到二维码中间。中间的大小为50x50，请先处理好图片。
 ```
-### 多个js文件合并成一个
+### egret引擎的100多个js文件合并成一个
 ```
-参考JSMergeExample文件夹
-里面有一个file_list.js文件(文件名不限，后缀不限，文本格式就可以)。
-这里面是需要合并的js文件列表，用逗号隔开。加载路径是相对路径。
-把file_list.js拖到js merge区域，就会在桌面上生成一个egretjs.js文件。
-这个js文件就是文件列表里的内容打包到一起后生成的。
-对于egret来说，把bin-debug/lib/egret_file_list.js 拷贝到libs文件夹里，
-然后拖拽到js Merge里就行了。
+把bin-debug/lib/egret_file_list.js拖到js merge区域，其他所有工作自动完成。
+使用的时候，在lancher/index.html里找到<script src="bin-debug/lib/egret_file_list.js"></script>
+把egret_file_list.js后面加个2，改成egret_file_list2.js就是使用合并后的引擎。去掉2就是原来的方式。
+具体的工具原理，
+1.在libs下生成一个egret_all.js文件，这个就是合并后的引擎。
+2.在bin-debug/lib下生成egret_file_list2.js。这个是加载单一引擎的文件
+如果你不需要，可以把这2个js删掉。
+
 ```
+    2015年1月12日 1.1.5 js文件合并功能改为egret专用，一键完成。
     2015年1月1日 1.1.4 增加egret默认的egret_file_list.js文件列表直接读取功能
     2014年12月26日 1.1.3 增加多个js文件合并成一个js文件的功能
     2014年10月06日 1.1.2 去掉二维码默认的http开头
